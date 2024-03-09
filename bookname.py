@@ -7,7 +7,7 @@ def app():
     def book():
         url="https://drive.google.com/file/d/1Hi5h1-ypClZ_P0yEDa3pOxyYgq8fU-sT/view?usp=sharing"
         response = urllib.request.urlopen(url)
-        df = pd.read_csv("도서정보2.csv")
+        df = pd.read_csv("도서정보2.csv","encoding=cp949")
         return df.set_index("책제목")
 
     try:
